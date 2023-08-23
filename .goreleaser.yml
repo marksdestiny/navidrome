@@ -5,6 +5,7 @@ builds:
   - id: navidrome_linux_amd64
     env:
       - CGO_ENABLED=1
+      - GOFLAGS=-buildvcs=false
     goos:
       - linux
     goarch:
@@ -19,6 +20,7 @@ builds:
     env:
       - CGO_ENABLED=1
       - PKG_CONFIG_PATH=/i386/lib/pkgconfig
+      - GOFLAGS=-buildvcs=false
     goos:
       - linux
     goarch:
@@ -35,6 +37,7 @@ builds:
       - CC=arm-linux-gnueabi-gcc
       - CXX=arm-linux-gnueabi-g++
       - PKG_CONFIG_PATH=/arm/lib/pkgconfig
+      - GOFLAGS=-buildvcs=false
     goos:
       - linux
     goarch:
@@ -55,6 +58,7 @@ builds:
       - CC=aarch64-linux-gnu-gcc
       - CXX=aarch64-linux-gnu-g++
       - PKG_CONFIG_PATH=/arm64/lib/pkgconfig
+      - GOFLAGS=-buildvcs=false
     goos:
       - linux
     goarch:
@@ -71,6 +75,7 @@ builds:
       - CC=i686-w64-mingw32-gcc
       - CXX=i686-w64-mingw32-g++
       - PKG_CONFIG_PATH=/mingw32/lib/pkgconfig
+      - GOFLAGS=-buildvcs=false
     goos:
       - windows
     goarch:
@@ -87,6 +92,7 @@ builds:
       - CC=x86_64-w64-mingw32-gcc
       - CXX=x86_64-w64-mingw32-g++
       - PKG_CONFIG_PATH=/mingw64/lib/pkgconfig
+      - GOFLAGS=-buildvcs=false
     goos:
       - windows
     goarch:
@@ -103,6 +109,7 @@ builds:
       - CC=o64-clang
       - CXX=o64-clang++
       - PKG_CONFIG_PATH=/darwin/lib/pkgconfig
+      - GOFLAGS=-buildvcs=false
     goos:
       - darwin
     goarch:
